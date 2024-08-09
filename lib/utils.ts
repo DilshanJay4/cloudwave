@@ -1,5 +1,3 @@
-/* eslint-disable prefer-const */
-/* eslint-disable no-prototype-builtins */
 import { type ClassValue, clsx } from "clsx";
 import qs from "qs";
 import { twMerge } from "tailwind-merge";
@@ -50,7 +48,6 @@ const toBase64 = (str: string) =>
 export const dataUrl = `data:image/svg+xml;base64,${toBase64(
   shimmer(1000, 1000)
 )}`;
-// ==== End
 
 // FORM URL QUERY
 export const formUrlQuery = ({
@@ -74,7 +71,7 @@ export function removeKeysFromQuery({
 
   keysToRemove.forEach((key) => {
     delete currentUrl[key];
-  });
+});
 
   // Remove null or undefined values
 Object.keys(currentUrl).forEach(
@@ -102,8 +99,7 @@ export const getImageSize = (
 ): number => {
   if (type === "fill") {
     return (
-      aspectRatioOptions[image.aspectRatio as AspectRatioKey]?.[dimension] ||
-      1000
+      aspectRatioOptions[image.aspectRatio as AspectRatioKey]?.[dimension] || 1000
     );
   }
   return image?.[dimension] || 1000;
@@ -155,4 +151,6 @@ export const deepMergeObjects = (obj1: any, obj2: any) => {
 
   return output;
 };
+
+
 

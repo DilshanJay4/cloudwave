@@ -70,7 +70,7 @@ module.exports = {
       },
       backgroundImage: {
         "purple-gradient": "url('/assets/images/gradient-bg.svg')",
-        banner: "url('/assets/images/banner-bg.png')",
+        banner: "url('/assets/images/banner.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,3 +95,6 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 };
+
+
+  // #0e203f
